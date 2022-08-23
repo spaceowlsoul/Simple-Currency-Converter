@@ -12,8 +12,7 @@ console.log('Welcome to Currency Converter!')
 currencies.forEach(el => console.log(`1 USD equals ${el.value} ${el.name}`));
 
 function convertion() {
-  let check = false;
-  while (!check) {
+  while (true) {
     const initialCurrency = input('What do you want to convert?\nFrom:').toUpperCase();
     if (currencies.map(el => el.name).includes(initialCurrency)) {
       const finalCurrency = input('To: \n').toUpperCase();
