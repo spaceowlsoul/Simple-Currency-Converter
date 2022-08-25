@@ -8,7 +8,7 @@ const currencies = [
   {name: 'GBP', value: 0.75},
 ];
 
-console.log('Welcome to Currency Converter!')
+console.log('Welcome to Currency Converter!');
 currencies.forEach(el => console.log(`1 USD equals ${el.value} ${el.name}`));
 
 function convertion() {
