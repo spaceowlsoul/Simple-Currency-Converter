@@ -20,16 +20,16 @@ function convertion() {
           const amount = input('Amount: \n');
           if (isNaN (Number(amount))) {
             console.log('The amount has to be a number');
-            } else if (Number(amount) < 1) {
-              console.log('The amount cannot be less than 1');
-              } else {
-                const indexInitial = currencies.findIndex(el => el.name === initialCurrency);
-                const indexFinal = currencies.findIndex(el => el.name === finalCurrency);
-                const valueInitial = currencies[indexInitial].value;
-                const valueFinal = currencies[indexFinal].value;
-                const result = (1 / valueInitial * amount * valueFinal).toFixed(4);
-                console.log(`Result: ${amount} ${initialCurrency} equals ${result} ${finalCurrency}`);
-                }
+          } else if (Number(amount) < 1) {
+            console.log('The amount cannot be less than 1');
+          } else {
+              const indexInitial = currencies.findIndex(el => el.name === initialCurrency);
+              const indexFinal = currencies.findIndex(el => el.name === finalCurrency);
+              const valueInitial = currencies[indexInitial].value;
+              const valueFinal = currencies[indexFinal].value;
+              const result = (1 / valueInitial * amount * valueFinal).toFixed(4);
+              console.log(`Result: ${amount} ${initialCurrency} equals ${result} ${finalCurrency}`);
+            }
       } else {
         console.log('Unknown currency');
         continue;
