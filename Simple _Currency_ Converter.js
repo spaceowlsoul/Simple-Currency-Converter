@@ -11,7 +11,7 @@ const currencies = [
 console.log('Welcome to Currency Converter!');
 currencies.forEach(el => console.log(`1 USD equals ${el.value} ${el.name}`));
 
-function convertion() {
+function conversion() {
   while (true) {
     const initialCurrency = input('What do you want to convert?\nFrom:').toUpperCase();
     if (currencies.map(el => el.name).includes(initialCurrency)) {
@@ -38,7 +38,7 @@ function convertion() {
       console.log('Unknown currency');
       continue;
     }
-  check = true;
+  return false;
   }
 }
 
@@ -46,7 +46,7 @@ let exit = false;
 while (!exit) {
     const action = input('What do you want to do?\n1-Convert currencies 2-Exit program\n');
     if (action === '1') {
-      convertion();
+      conversion();
     } else if (action === '2') {
       console.log('Have a nice day!');
       exit = true;
